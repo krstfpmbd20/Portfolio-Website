@@ -7,7 +7,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    font-size: clamp(16px, 2vw, 23px); /* Responsive font size */
+    font-size: 23px;
     /*background-color: #ffffff; /* Background color for the body */
     background-image: url('crumpled.jpg'); /* Path to your image */
     background-size: cover; /* Ensure the image covers the entire screen */
@@ -254,120 +254,78 @@ footer a {
     color: #0077B5; /* Darker color on hover */
 }
 
-@media screen and (max-width: 1024px) {
-    .about {
-        padding: 30px 25px;
-    }
-
-    .skill-category, .nontech-item {
-        width: 70%;
-    }
-}
-
 @media screen and (max-width: 768px) {
-    header {
-        padding: 20px 0;
-        flex-direction: column;
+    body {
+        font-size: 20px;
     }
 
-    header nav {
-        width: 100%;
-        justify-content: center;
-        margin: 10px 0;
+    header nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: center;
     }
 
     header li {
-        margin: 5px 15px;
+        margin: 10px 0; /* Increase spacing between menu items */
     }
 
-    header a {
-        font-size: 24px;
-    }
-
-    .about {
-        padding: 30px 20px;
+    .about-container, .skills-container, .experience-container, .nontech-container {
+        flex-direction: column; /* Stack sections vertically for mobile */
+        align-items: flex-start;
+        width: 100%;
     }
 
     .skill-category, .nontech-item {
-        width: 100%;
+        width: 100%; /* Ensure full width on smaller screens */
+        text-align: left; /* Align text to the left */
     }
 
-    .skills-container, .nontech-container {
-        align-items: flex-start;
-    }
-
-    .skill-category ul, .nontech-container ul p {
-        text-align: left;
+    .nontech-container ul p {
+        text-align: left; /* Align paragraph text for non-tech items */
     }
 
     footer {
-        padding: 20px 0;
         flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
-    footer nav {
-        width: 100%;
-        justify-content: center;
+    footer nav:first-child, footer nav:last-child {
+        justify-content: center; /* Center footer links */
+    }
+
+    footer li {
         margin: 10px 0;
     }
 
     .social-links {
-        justify-content: center;
+        flex-direction: column;
     }
 
     .social-links a {
-        margin: 0 15px;
+        margin: 10px 0;
     }
 }
 
+/* Mobile Devices (e.g. Phones) */
 @media screen and (max-width: 480px) {
     body {
-        font-size: 16px;
+        font-size: 18px;
     }
 
-    header a {
-        font-size: 20px;
+    header nav ul {
+        flex-direction: column; /* Stack nav items */
+        align-items: center;
     }
 
-    header li, footer li {
-        margin: 5px 10px;
+    .about-container, .skills-container, .experience-container, .nontech-container {
+        padding: 20px; /* Add padding to sections */
     }
 
-    .about {
-        padding: 20px 15px;
-    }
-
-    h2 {
-        font-size: 24px;
-    }
-
-    h3 {
-        font-size: 20px;
+    .skill-category, .nontech-item {
+        width: 100%;
     }
 
     .social-links a {
-        font-size: 1.5rem;
-        margin: 0 10px;
-    }
-}
-
-/* Add print styles */
-@media print {
-    body {
-        font-size: 12pt;
-        background-image: none;
-    }
-
-    header, footer {
-        display: none;
-    }
-
-    .about {
-        padding: 0;
-    }
-
-    a {
-        text-decoration: none;
-        color: #000;
+        font-size: 1.8rem; /* Resize icons for smaller screens */
     }
 }
