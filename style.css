@@ -9,7 +9,7 @@ body {
     padding: 0;
     font-size: clamp(16px, 2vw, 23px); /* Responsive font size */
     /*background-color: #ffffff; /* Background color for the body */
-    background-image: url('images/crumpled.jpg'); /* Path to your image */
+    background-image: url('crumpled.jpg'); /* Path to your image */
     background-size: cover; /* Ensure the image covers the entire screen */
     background-repeat: no-repeat; /* Prevent the image from repeating */
     background-position: center center; /* Center the image */
